@@ -6,8 +6,12 @@
         <source>
 		      <location>http://{{ http_server }}/configs/{{ config_filename }}.cfg</location>
         </source>
+        <applyTo>startup</applyTo>
       </copy>
     </config>
-    <noReload/>
+    <reload>
+      <reason>PNP Configuration Push</reason>
+      <user>admin</user>
+    </reload>
   </request>
 </pnp>
